@@ -1,10 +1,14 @@
-logging:
- config: # TODO: Add config
- exception-conversion-word: # TODO: Add config
-file:  # TODO: Add config
- path: # TODO: Add config
- 
- pattern:
-  console: # TODO: Add config
-  file: # TODO: Add config
-  level: # TODO: Add config
+spring:
+ datasource:
+  url: ${DB_URL}
+  username: ${DB_USER}
+  password: ${DB_PASS}
+  
+ jpa:
+  show-sql: true
+  hibernate:
+   ddl-auto: update
+  properties:
+   dialect: org.hibernate.dialect.MySQL5Dialect
+ thymeleaf:
+   cache: false
